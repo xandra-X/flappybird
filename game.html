@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird - Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="pauseBtn" style="
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:20;
+    display:none;">
+    ⏸
+  </button>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script>
+    let selectedLevel = localStorage.getItem("selectedLevel") || 1;
+    selectedLevel = parseInt(selectedLevel);
+
+    window.currentLevel = selectedLevel;
+  </script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
